@@ -182,10 +182,46 @@
         1,
         1,
         1,
+        1,
         null
       ],
       "/Users/danielatkinson/turing/2module/projects/adopt_dont_shop_2001/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/danielatkinson/turing/2module/projects/adopt_dont_shop_2001/spec/features/shelter/user_sees_all_shelter_info_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
         null
       ],
       "/Users/danielatkinson/turing/2module/projects/adopt_dont_shop_2001/app/models/shelter.rb": [
@@ -202,6 +238,9 @@
         1,
         1,
         null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/danielatkinson/turing/2module/projects/adopt_dont_shop_2001/app/controllers/application_controller.rb": [
@@ -210,6 +249,6 @@
         null
       ]
     },
-    "timestamp": 1584489991
+    "timestamp": 1584566561
   }
 }
