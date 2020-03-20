@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "user can see pets", type: :feature do
-  it "can see all pets info" do
+RSpec.describe "user can see list of pets", type: :feature do
+  it "can see pets from certain shelter" do
     shelter1 = Shelter.create(name: "Humane Society of Boulder Valley",
                               address: "2323 55th St",
                               city: "Boulder",
@@ -16,24 +16,40 @@ RSpec.describe "user can see pets", type: :feature do
                       name: 'Kahlua',
                       age: '4',
                       sex: 'Female',
-                      shelter_id: shelter1.id)
+                      shelter: shelter1)
     pet2 = Pet.create(image: '/assets/luna.png',
                       name: 'Luna',
                       age: '2',
                       sex: 'Female',
-                      shelter_id: shelter2.id)
-    visit '/pets'
+                      shelter: shelter2)
+
+    visit "/shelters/#{shelter1.id}/pets"
 
     expect(page).to have_css("img[src*='kahlua.png']")
     expect(page).to have_content(pet1.name)
     expect(page).to have_content(pet1.age)
     expect(page).to have_content(pet1.sex)
-    expect(page).to have_content(Shelter.find(pet1.shelter_id).name)
+    expect(page).not_to have_css("img[src*='luna.png']")
+    expect(page).not_to have_content(pet2.name)
+
+    visit "/shelters/#{shelter2.id}/pets"
 
     expect(page).to have_css("img[src*='luna.png']")
     expect(page).to have_content(pet2.name)
     expect(page).to have_content(pet2.age)
     expect(page).to have_content(pet2.sex)
-    expect(page).to have_content(Shelter.find(pet2.shelter_id).name)
+    expect(page).not_to have_css("img[src*='kahlua.png']")
+    expect(page).not_to have_content(pet1.name)
   end
 end
+
+
+# User Story 8, Shelter Pets Index
+#
+# As a visitor
+# When I visit '/shelters/:shelter_id/pets'
+# Then I see each Pet that can be adopted from that Shelter with that shelter_id including the Pet's:
+# - image
+# - name
+# - approximate age
+# - sex
