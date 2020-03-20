@@ -20,7 +20,7 @@ RSpec.describe "shelter id page", type: :feature do
     expect(page).to have_content(shelter1.state)
     expect(page).to have_content(shelter1.zip)
     expect(page).to have_link("Update Shelter", href:"/shelters/#{shelter1.id}/edit")
-    expect(page).to have_link("Delete Shelter", href:"/shelters/#{shelter1.id}/")
+    expect(page).to have_link("Delete Shelter")
 
     visit "/shelters/#{shelter2.id}/"
 
@@ -30,6 +30,6 @@ RSpec.describe "shelter id page", type: :feature do
     expect(page).to have_content(shelter2.state)
     expect(page).to have_content(shelter2.zip)
     expect(page).to have_link("Update Shelter", href:"/shelters/#{shelter2.id}/edit")
-    expect(page).to have_link("Delete Shelter", href:"/shelters/#{shelter2.id}/")
+    expect(page).to have_link("Delete Shelter")
   end
 end

@@ -56,6 +56,8 @@
         null,
         1,
         null,
+        1,
+        null,
         null,
         null,
         null,
@@ -189,13 +191,18 @@
         1,
         1,
         1,
+        null,
+        1,
+        null,
+        1,
         null
       ],
       "/Users/danielatkinson/turing/2module/projects/adopt_dont_shop_2001/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/danielatkinson/turing/2module/projects/adopt_dont_shop_2001/app/models/shelter.rb": [
+      "/Users/danielatkinson/turing/2module/projects/adopt_dont_shop_2001/app/models/pet.rb": [
+        1,
         1,
         null
       ],
@@ -204,62 +211,13 @@
         1,
         null
       ],
-      "/Users/danielatkinson/turing/2module/projects/adopt_dont_shop_2001/app/controllers/shelters_controller.rb": [
+      "/Users/danielatkinson/turing/2module/projects/adopt_dont_shop_2001/app/models/shelter.rb": [
         1,
-        1,
-        2,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        0,
-        0,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/danielatkinson/turing/2module/projects/adopt_dont_shop_2001/app/controllers/application_controller.rb": [
         1,
         1,
         null
       ]
     },
-    "timestamp": 1584653844
+    "timestamp": 1584744292
   }
 }
