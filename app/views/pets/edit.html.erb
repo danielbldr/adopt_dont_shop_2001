@@ -1,0 +1,21 @@
+<%= form_tag("/pets/#{@pet.id}", method: "patch") do %>
+  <%= label_tag(:name, "Name:") %>
+  <%= text_field_tag(:name, @pet.name) %>
+
+  <%= label_tag(:sex, "Sex:") %>
+  <%= text_field_tag(:sex, @pet.sex) %>
+
+  <%= label_tag(:age, "Approximate Age:") %>
+  <%= text_field_tag(:age, @pet.age) %>
+
+  <%= label_tag(:description, "Description:") %>
+  <%= text_field_tag(:description, @pet.description) %>
+
+  <%= label_tag(:image, "Image") %>
+  <%= text_field_tag(:image, @pet.image) %>
+
+  <%= label_tag(:adoption_status, "Adoption Status") %>
+  <%= text_field_tag(:adoption_status, @pet.adoption_status) %>
+
+  <%= submit_tag("Submit") %>
+<% end %>

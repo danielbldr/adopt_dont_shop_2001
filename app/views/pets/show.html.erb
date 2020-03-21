@@ -8,3 +8,5 @@
   <li>Currently Located At: <%= Shelter.find(@pet.shelter_id).name %></li>
   <li>Adoption Status: <%= @pet.adoption_status %></li>
 </ol>
+
+<%= link_to "Update Pet", { :controller => "pets", :action => "edit" }%>
