@@ -10,5 +10,6 @@
     <li>Currently Located At: <%= Shelter.find(pet.shelter_id).name %></li>
     <li>Adoption Status: <%= pet.adoption_status %></li>
     <a href= <%= "/pets/#{pet.id}/edit"%>>Edit Pet</a>
+    <%= link_to "Delete Pet", "/pets/#{pet.id}", method: :delete %>
   </ol>
 <% end %>
