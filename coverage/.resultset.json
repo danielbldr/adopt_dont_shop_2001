@@ -207,6 +207,41 @@
         1,
         null
       ],
+      "/Users/danielatkinson/turing/2module/projects/adopt_dont_shop_2001/spec/features/pet/user_can_delete_pet_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/danielatkinson/turing/2module/projects/adopt_dont_shop_2001/spec/features/pet/user_can_see_all_pets_and_pet_info_spec.rb": [
         1,
         null,
@@ -756,7 +791,7 @@
       "/Users/danielatkinson/turing/2module/projects/adopt_dont_shop_2001/app/controllers/pets_controller.rb": [
         1,
         1,
-        4,
+        6,
         null,
         null,
         1,
@@ -782,8 +817,8 @@
         null,
         null,
         1,
-        1,
-        1,
+        2,
+        2,
         null,
         null
       ],
@@ -870,6 +905,6 @@
         null
       ]
     },
-    "timestamp": 1584827762
+    "timestamp": 1584828470
   }
 }
