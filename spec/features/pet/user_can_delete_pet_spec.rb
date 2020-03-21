@@ -29,6 +29,5 @@ RSpec.describe 'when a user visits a pets show page', type: :feature do
     expect(current_path).to eq("/pets")
     expect(page).to_not have_content(pet1.name)
     expect(page).to have_content(pet2.name)
-
   end
 end

@@ -22,8 +22,6 @@ class PetsController < ApplicationController
       image: params[:image],
     })
 
-    require "pry"; binding.pry
-
     redirect_to "/pets/#{params[:id]}"
   end
 

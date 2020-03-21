@@ -27,8 +27,6 @@ RSpec.describe "When use visits pet show page and clicks update pet", type: :fea
 
     click_button 'Submit'
 
-    save_and_open_page
-
     expect(current_path).to eq("/pets/#{pet1.id}")
     expect(page).to have_content('Kahlua')
     expect(page).to have_content('Female')
