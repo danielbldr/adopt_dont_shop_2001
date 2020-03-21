@@ -17,22 +17,17 @@ RSpec.describe "user visits a pet's show page", type: :feature do
                       age: '4',
                       sex: 'Female',
                       shelter: shelter1,
-                      description: "Kahlua is a english cream golden retriever.
-                                    She loves kids and wants to be with an active
-                                    family.",
+                      description: "Kahlua is a english cream golden retriever. She loves kids and wants to be with an active family.",
                       adoption_status: "Available")
       pet2 = Pet.create(image: '/assets/luna.png',
                         name: 'Luna',
                         age: '2',
                         sex: 'Female',
                         shelter: shelter2,
-                        description: "Luna is a mini golden doodle. She loves
-                                      treats, walks, and chasing squirrels.",
+                        description: "Luna is a mini golden doodle. She loves treats, walks, and chasing squirrels.",
                         adoption_status: "Available")
 
       visit "pets/#{pet1.id}"
-
-      save_and_open_page
 
       expect(page).to have_css("img[src*='kahlua.png']")
       expect(page).to have_content(pet1.name)
