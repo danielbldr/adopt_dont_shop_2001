@@ -4,8 +4,11 @@
   <h2><%= pet.name %></h2>
   <%=image_tag(pet.image)%>
   <ol>
+    <li>Description: <%= pet.description %></li>
     <li>Approximate Age: <%= pet.age %></li>
     <li>Sex: <%= pet.sex %></li>
     <li>Currently Located At: <%= Shelter.find(pet.shelter_id).name %></li>
+    <li>Adoption Status: <%= pet.adoption_status %></li>
+    <a href= <%= "/pets/#{pet.id}/edit"%>>Edit Pet</a>
   </ol>
 <% end %>
