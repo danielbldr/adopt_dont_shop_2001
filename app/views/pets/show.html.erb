@@ -10,3 +10,4 @@
 </ol>
 
 <%= link_to "Update Pet", { :controller => "pets", :action => "edit" }%>
+<%= link_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %>
