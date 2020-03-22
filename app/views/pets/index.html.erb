@@ -7,7 +7,7 @@
     <li>Description: <%= pet.description %></li>
     <li>Approximate Age: <%= pet.age %></li>
     <li>Sex: <%= pet.sex %></li>
-    <li>Currently Located At: <%= Shelter.find(pet.shelter_id).name %></li>
+    <li>Currently Located At: <%= link_to Shelter.find(pet.shelter_id).name, "/shelters/#{pet.shelter_id}" %></li>
     <li>Adoption Status: <%= pet.adoption_status %></li>
     <a href= <%= "/pets/#{pet.id}/edit"%>>Edit Pet</a>
     <%= link_to "Delete Pet", "/pets/#{pet.id}", method: :delete %>

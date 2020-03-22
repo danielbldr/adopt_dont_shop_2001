@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "On pet index page user can click Update pet link", type: :feature do
-  it "takes them to the edit view page to edit the pet" do
+RSpec.describe 'User can click on shelter name', type: :feature do
+  it "will nagivate to the shelter show page" do
     shelter1 = Shelter.create(name: "Humane Society of Boulder Valley",
                               address: "2323 55th St",
                               city: "Boulder",
@@ -24,17 +24,37 @@ RSpec.describe "On pet index page user can click Update pet link", type: :featur
                       age: '2',
                       sex: 'Female',
                       shelter: shelter2,
-                      descriptiobn: "Luna is a mini golden doodle. She loves treats, walks, and chasing squirrels.",
+                      description: "Luna is a mini golden doodle. She loves treats, walks, and chasing squirrels.",
                       adoption_status: "Available")
 
-    delete_pet_path = "/pets/#{pet1.id}"
+    visit '/shelters'
+    click_link 'Humane Society of Boulder Valley'
+
+    expect(current_path).to eq("/shelters/#{shelter1.id}")
+
+    visit '/shelters'
+    click_link 'Longmont Humane Society'
+
+    expect(current_path).to eq("/shelters/#{shelter2.id}")
 
     visit '/pets'
+    click_link 'Humane Society of Boulder Valley'
 
-    find("a[href='#{delete_pet_path}']").click
+    expect(current_path).to eq("/shelters/#{shelter1.id}")
 
-    expect(page).to have_current_path("/pets")
-    expect(page).to have_content(pet2.name)
-    expect(page).to_not have_content(pet1.name)
+    visit '/pets'
+    click_link 'Longmont Humane Society'
+
+    expect(current_path).to eq("/shelters/#{shelter2.id}")
+
+    visit "/shelters/#{shelter1.id}/pets"
+    click_link 'Humane Society of Boulder Valley', match: :first
+
+    expect(current_path).to eq("/shelters/#{shelter1.id}")
+
+    visit "/shelters/#{shelter2.id}/pets"
+    click_link 'Longmont Humane Society', match: :first
+
+    expect(current_path).to eq("/shelters/#{shelter2.id}")
   end
 end
