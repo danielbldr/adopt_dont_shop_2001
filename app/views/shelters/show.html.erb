@@ -8,5 +8,5 @@
   <li>Zip Code: <%= @shelter.zip %></li>
 </ul>
 
-<%= link_to "Update Shelter", { :controller => "shelters", :action => "edit" }%>
-<%= link_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete %>
+<%= link_to "Update Shelter", { :controller => "shelters", :action => "edit" }, class: 'view_links'%>
+<%= link_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete, class: 'view_links' %>

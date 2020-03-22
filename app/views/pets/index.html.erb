@@ -2,14 +2,18 @@
 
 <% @pets.each do |pet| %>
   <h2><%= link_to pet.name, "/pets/#{pet.id}" %></h2>
-  <%=image_tag(pet.image)%>
-  <ol>
-    <li>Description: <%= pet.description %></li>
+  <div class>
+    <%=image_tag(pet.image)%>
+    <p><%= pet.description %></p>
+  </div>
+  <ul>
     <li>Approximate Age: <%= pet.age %></li>
     <li>Sex: <%= pet.sex %></li>
     <li>Currently Located At: <%= link_to Shelter.find(pet.shelter_id).name, "/shelters/#{pet.shelter_id}" %></li>
     <li>Adoption Status: <%= pet.adoption_status %></li>
-    <a href= <%= "/pets/#{pet.id}/edit"%>>Edit Pet</a>
-    <%= link_to "Delete Pet", "/pets/#{pet.id}", method: :delete %>
-  </ol>
+    <div class="link_margin">
+      <a href= <%= "/pets/#{pet.id}/edit"%> class='view_links'>Edit Pet</a>
+      <%= link_to "Delete Pet", "/pets/#{pet.id}", method: :delete, class: 'view_links' %>
+    </div>
+  </ul>
 <% end %>

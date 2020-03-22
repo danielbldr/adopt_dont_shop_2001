@@ -1,18 +1,25 @@
+<h1>New Pet</h1>
+
 <%= form_tag("/shelters/#{@shelter.id}/pets", method: "post") do %>
   <%= label_tag(:name, "Name:") %>
   <%= text_field_tag(:name) %>
+  </br>
 
   <%= label_tag(:sex, "Sex:") %>
   <%= text_field_tag(:sex) %>
+  </br>
 
   <%= label_tag(:age, "Approximate Age:") %>
   <%= text_field_tag(:age) %>
+  </br>
 
   <%= label_tag(:description, "Description:") %>
   <%= text_field_tag(:description) %>
+  </br>
 
   <%= label_tag(:image, "Image") %>
   <%= text_field_tag(:image) %>
+  </br>
 
   <%= submit_tag("Create Pet") %>
 <% end %>

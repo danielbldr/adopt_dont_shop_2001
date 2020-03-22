@@ -2,12 +2,14 @@
 
 <% @pets.each do |pet| %>
   <h2><%= link_to pet.name, "/pets/#{pet.id}" %></h2>
-  <%=image_tag(pet.image)%>
-  <ol>
-    <li>Description: <%= pet.description %></li>
+  <div class="pciture_div">
+    <%=image_tag(pet.image)%>
+    <p>Description: <%= pet.description %></p>
+  </div>
+  <ul>
     <li>Approximate Age: <%= pet.age %></li>
     <li>Sex: <%= pet.sex %></li>
     <li>Currently Located At: <%= link_to Shelter.find(pet.shelter_id).name, "/shelters/#{pet.shelter_id}" %></li>
     <li>Adoption Status: <%= pet.adoption_status %></li>
-  </ol>
+  </ul>
 <% end %>
