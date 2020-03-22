@@ -1,4 +1,4 @@
-<h1>Pets from <%= @shelter.name %></h1>
+<h1>Pets from <%= link_to @shelter.name, "/shelters/#{@shelter.id}" %></h1>
 
 <% @pets.each do |pet| %>
   <h2><%= pet.name %></h2>
@@ -7,7 +7,7 @@
     <li>Description: <%= pet.description %></li>
     <li>Approximate Age: <%= pet.age %></li>
     <li>Sex: <%= pet.sex %></li>
-    <li>Currently Located At: <%= Shelter.find(pet.shelter_id).name %></li>
+    <li>Currently Located At: <%= link_to Shelter.find(pet.shelter_id).name, "/shelters/#{pet.shelter_id}" %></li>
     <li>Adoption Status: <%= pet.adoption_status %></li>
   </ol>
 <% end %>
