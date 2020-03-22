@@ -24,14 +24,14 @@ RSpec.describe "On pet index page user can click Update pet link", type: :featur
                       age: '2',
                       sex: 'Female',
                       shelter: shelter2,
-                      descriptiobn: "Luna is a mini golden doodle. She loves treats, walks, and chasing squirrels.",
+                      description: "Luna is a mini golden doodle. She loves treats, walks, and chasing squirrels.",
                       adoption_status: "Available")
 
     delete_pet_path = "/pets/#{pet1.id}"
 
     visit '/pets'
 
-    find("a[href='#{delete_pet_path}']").click
+    find("a[href='#{delete_pet_path}']", :text => "Delete Pet").click
 
     expect(page).to have_current_path("/pets")
     expect(page).to have_content(pet2.name)

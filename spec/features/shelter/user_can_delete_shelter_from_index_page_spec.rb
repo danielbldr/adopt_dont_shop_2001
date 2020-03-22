@@ -15,8 +15,9 @@ RSpec.describe "On shelter index page user can click delete shelter link", type:
 
 
     delete_shelters_path = "/shelters/#{shelter1.id}"
+
     visit '/shelters'
-    find("a[href='#{delete_shelters_path}']").click
+    find("a[href='#{delete_shelters_path}']", :text => "Delete Shelter").click
 
     expect(page).to have_current_path("/shelters")
     expect(page).to have_content(shelter2.name)
