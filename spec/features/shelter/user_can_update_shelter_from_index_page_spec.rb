@@ -32,14 +32,3 @@ RSpec.describe "On shelter index page user can click update shelter link", type:
     expect(page).to have_content('80301')
   end
 end
-
-
-# [ ] done
-#
-# User Story 13, Shelter Update From Shelter Index Page
-#
-# As a visitor
-# When I visit the shelter index page
-# Next to every shelter, I see a link to edit that shelter's info
-# When I click the link
-# I should be taken to that shelters edit page where I can update its information just like in User Story 5
